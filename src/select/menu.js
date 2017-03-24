@@ -1,8 +1,11 @@
+import { flow, orderBy, partial } from 'lodash'
 import { createSelector, createStructuredSelector } from 'reselect'
+import { bindActionCreators } from 'redux'
 import { logout } from 'cape-redux-auth'
 import { keyBy } from 'lodash/fp'
 import { setIn } from 'cape-redux'
 import { favsListSelector } from 'cape-redux-collection'
+import { createObj } from 'cape-lodash'
 import { getDb } from './'
 import { filterPerms } from './perms'
 import { getRouteId } from '../redux/routing'
@@ -16,7 +19,7 @@ export const menuItems = createSelector(
   (items, favsList) => {
     const menu = keyBy('id')(items)
     if (menu.project && favsList) return setIn(['project', 'href'], menu, projectLink(favsList))
-    return menu
+    return orderBy(menu, 'position')
   }
 )
 
@@ -25,6 +28,11 @@ export const menuSelector = createStructuredSelector({
   links: menuItems,
   activeId: getRouteId,
 })
-export const menuActions = {
+const actions = {
+  // auth,
   logout,
 }
+export const menuActions = flow(
+  partial(bindActionCreators, actions),
+  createObj('actions')
+)

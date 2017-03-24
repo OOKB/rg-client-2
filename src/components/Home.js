@@ -9,7 +9,7 @@ import ItemGrid from './ItemGrid'
 import Logo from './Logo'
 // import Drawer from './Drawer'
 
-function Home({ imgSize, items, missingImage, showDrawer }) {
+function Home({ imgSize, items, missingImage }) {
   return (
     <div id="home">
       <Header />

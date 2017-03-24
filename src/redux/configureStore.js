@@ -10,6 +10,7 @@ import {
 } from 'redux-history-sync'
 
 import { reduxFireListener, reduxFireMiddleware } from '../firebase'
+import defaultState from './defaultState'
 
 /* global window */
 
@@ -37,7 +38,7 @@ export default function configureStore(initialState) {
       currentYear: new Date().getFullYear(),
     },
   }
-  const initState = merge(initialState, calculatedState)
+  const initState = merge(initialState, defaultState, calculatedState)
   const store = createStore(
     reducer,
     initState,

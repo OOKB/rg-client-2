@@ -3,7 +3,7 @@ import { find, map, size } from 'lodash'
 import { PREDICATE } from 'cape-redux-collection'
 
 import Page from '../Page'
-import Icon from '../Icon'
+// import Icon from '../Icon'
 import Item from '../Item'
 
 function FavsList({ listItems, imgSize }) {

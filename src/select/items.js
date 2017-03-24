@@ -9,12 +9,17 @@ import { entityTypeSelector } from 'redux-graph'
 import { getFilter } from './'
 import { activeCategorySelector, categoryCodeIndex } from './category'
 import { discFilter } from './disc'
+import { CDN_URL } from '../config'
 
 export const activeColor = getFilter('color')
 // const CDN = 'https://3f363c8bf5767a720417-fdf7aa33c10c7fb6e1c8c4e342fa358c.ssl.cf5.rackcdn.com'
-const CDN = 'https://delanyandlong.imgix.net'
-export function getImgUrl(id) {
-  return `${CDN}/${id.replace('|', '-')}.jpg`
+export const catImgIn = {
+  textile: 'normal',
+  leather: 'leather',
+  passementerie: 'passementrie',
+}
+export function getImgUrl(category, id) {
+  return `${CDN_URL}/${catImgIn[category]}/${id.replace('|', '-')}.jpg`
 }
 export function itemFill(item, catCodeIndex) {
   if (!item || !item.id) return item
@@ -27,7 +32,7 @@ export function itemFill(item, catCodeIndex) {
     color,
     colorNumber,
     link: `/detail/${id}`,
-    img: getImgUrl(id),
+    img: getImgUrl(category, id),
     price: `$${price}${category === 'leather' ? ' sq ft' : ''}`,
     searchable: (color + contents + name + id).toLowerCase(),
   }
@@ -36,7 +41,7 @@ export function itemFill(item, catCodeIndex) {
 export const orderTrackItems = entityTypeSelector('OrderTrackItem')
 // Define what a "valid" base item is.
 export function isValidItem(entity) {
-  return startsWith(entity.id, 'DL') && entity.category
+  return true
 }
 // Accepts object and returns new object of only valid items.
 export const filterValid = pickBy(isValidItem)
