@@ -1,26 +1,30 @@
-import { flow, partial, property } from 'lodash'
-import { createStructuredSelector } from 'reselect'
-import { bindActionCreators } from 'redux'
-import { createObj } from 'cape-lodash'
-import { auth, logout } from 'cape-firebase'
+import { createSelector, createStructuredSelector } from 'reselect'
+import { logout } from 'cape-redux-auth'
+import { keyBy } from 'lodash/fp'
+import { setIn } from 'cape-redux'
+import { favsListSelector } from 'cape-redux-collection'
+import { getDb } from './'
 import { filterPerms } from './perms'
 import { getRouteId } from '../redux/routing'
+import { projectLink } from '../redux/collection'
 
-export const getMenu = property('db.menu')
+export const getMenu = getDb('menu')
 
-export const menuItems = filterPerms(getMenu)
+export const menuItems = createSelector(
+  filterPerms(getMenu),
+  favsListSelector,
+  (items, favsList) => {
+    const menu = keyBy('id')(items)
+    if (menu.project && favsList) return setIn(['project', 'href'], menu, projectLink(favsList))
+    return menu
+  }
+)
 
 // Used for the component state.
 export const menuSelector = createStructuredSelector({
   links: menuItems,
   activeId: getRouteId,
 })
-
-const actions = {
-  auth,
+export const menuActions = {
   logout,
 }
-export const menuActions = flow(
-  partial(bindActionCreators, actions),
-  createObj('actions')
-)

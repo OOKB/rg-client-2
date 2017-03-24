@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import map from 'lodash/map'
 
-import { ternVal } from '../utils'
+import { fpBranch } from 'cape-lodash'
 import Icon from '../Icon'
 import Color from './RelatedColor'
 
@@ -27,8 +27,8 @@ const style = {
   },
 }
 
-const getStyle = ternVal(style.open, style.closed)
-const getRotation = ternVal(style.rotated, style.plain)
+const getStyle = fpBranch(style.open, style.closed)
+const getRotation = fpBranch(style.rotated, style.plain)
 
 function Related({ close, colors, isOpen, open, parent }) {
   const toggle = isOpen ? close : open
