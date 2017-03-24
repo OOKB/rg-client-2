@@ -1,5 +1,17 @@
-import home from './App'
+import about from './About'
+
+import contact from './Contact'
+// export favs from './containers/Favs'
+import loading from '../redux/Loading'
+import home from './Home'
+import detail from '../containers/Detail'
+// export itemEdit from './containers/ItemEdit'
+import pricelist from './Pricelist/Pricelist'
+import project from '../containers/Project'
+import projects from './Fav/Projects'
+import login from '../containers/Login'
+import showroom from '../containers/Showroom'
 
 export {
-  home,
+  about, contact, loading, home, detail, pricelist, project, projects, login, showroom,
 }
