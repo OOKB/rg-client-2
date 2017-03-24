@@ -1,10 +1,10 @@
 import { flow, partial } from 'lodash'
 import { add, get, map, orderBy, pick, size, split } from 'lodash/fp'
-import { callWith, replaceField, set, setField, setKeyVal } from 'cape-lodash'
+import { callWith, replaceField, setField, setKeyVal } from 'cape-lodash'
 import { createSelector } from 'reselect'
 import { getSelect, structuredSelector } from 'cape-select'
 import { clear, fieldValue, meta, saved, saveProgress } from 'redux-field'
-import { entityTypeSelector, isEntityCreatedDate } from 'redux-graph'
+import { entityTypeSelector } from 'redux-graph'
 import { selectUser } from 'cape-redux-auth'
 import { saveEntity } from 'cape-firebase'
 

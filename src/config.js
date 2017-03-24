@@ -1,9 +1,10 @@
-export const CDN_URL = 'http://dl-f.imgix.net/'
+export const CDN_URL = 'http://rg.imgix.net/'
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDmoWCc7mwN02lTBrp0mKmh8oeu_k86C5U',
-  authDomain: 'delanylong.firebaseapp.com',
-  databaseURL: 'https://delanylong.firebaseio.com',
-  storageBucket: 'delanylong.appspot.com',
+  apiKey: "AIzaSyBdsNsF16mnOOryOn_oFzDBG8afnUYlr6I",
+  authDomain: "rogersandgoffigon-b0977.firebaseapp.com",
+  databaseURL: "https://rogersandgoffigon-b0977.firebaseio.com",
+  storageBucket: "rogersandgoffigon-b0977.appspot.com",
+  messagingSenderId: "269310750724"
 }
 export const OT_ITEM = 'OrderTrackItem'
 export const HOME_DRAWER = 'HomeDrawer'
