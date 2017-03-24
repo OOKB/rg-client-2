@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { onBlur, onFocus } from 'redux-field'
 
-import { discActive, prefix, props } from '../redux/select/disc'
+import { discActive, prefix, props } from '../select/disc'
 import Component from '../components/DiscToggle'
 
 export function onClick() {

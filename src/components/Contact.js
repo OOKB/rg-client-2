@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { contactSelector } from '../redux/select/contact'
+import { contactSelector } from '../select/contact'
 // import Editor from '../containers/Editor'
 // <Editor classId="Organization" />
 import Page from './Page'

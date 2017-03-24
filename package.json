@@ -23,6 +23,7 @@
     "cape-redux-collection": "^4.0.1",
     "cape-redux-reducer": "^3.6.0",
     "cape-select": "^2.4.0",
+    "cape-validate": "^1.0.2",
     "classnames": "^2.2.5",
     "firebase": "^3.6.3",
     "location-info": "^3.1.1",

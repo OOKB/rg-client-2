@@ -7,7 +7,7 @@ import Grid from '../ItemGrid'
 import Film from '../FilmStrip'
 import Page from '../Page'
 import SummerText from '../SummerText'
-import { pricelistSelector } from '../../redux/select/pricelist'
+import { pricelistSelector } from '../../select/pricelist'
 
 function Pricelist(props) {
   const { categoryKey, info, lead, disclaimer, pager, imgSize } = props

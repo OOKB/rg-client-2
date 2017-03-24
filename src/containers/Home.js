@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
 
-import { homeSelector as mapStateToProps } from '../redux/select/home'
+import { homeSelector as mapStateToProps } from '../select/home'
 
-import { missingImage } from '../redux/dispatch/items'
+import { missingImage } from '../dispatch/items'
 import Component from '../components/Home'
 
 const mapDispatchToProps = { missingImage }

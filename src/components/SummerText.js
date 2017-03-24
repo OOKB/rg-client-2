@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { map } from 'lodash'
 import { connect } from 'react-redux'
 
-import { discMsgTxt } from '../redux/select/disc'
+import { discMsgTxt } from '../select/disc'
 
 function SummerText({ active, texts }) {
   return active && (

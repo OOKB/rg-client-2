@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { createSelector } from 'reselect'
 
-import { entitySelector, entityUpdate } from '@kaicurry/redux-graph'
+import { entitySelector, entityUpdate } from 'redux-graph'
 import { selectUser } from 'cape-redux-auth'
 import { set } from 'cape-redux'
 

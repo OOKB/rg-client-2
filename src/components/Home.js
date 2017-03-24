@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { homeSelector } from '../redux/select/home'
+import { homeSelector } from '../select/home'
 import Header from './Header'
 import Footer from './Footer'
 import Icon from './Icon'

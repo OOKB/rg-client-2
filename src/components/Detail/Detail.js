@@ -7,7 +7,6 @@ import DetailHeader from './DetailHeader'
 import Info from '../Info'
 import Related from '../../containers/Related'
 import Close from '../CloseButton'
-import Images from '../Editable/ImageUpload/Images'
 
 function Detail({ detailClose, disclaimer, item, route: { id } }) {
   const editing = id === 'itemEdit'
@@ -16,12 +15,6 @@ function Detail({ detailClose, disclaimer, item, route: { id } }) {
     <div id="detailWrapper" className={classnames('absolute', item.category, { editing })}>
       <DetailHeader />
       <Info item={item} />
-      <div className="imageWrapper absolute z1">
-        <img src={`${item.img}?w=1500&fm=pjpg`} alt={item.id} />
-        {editing &&
-          <Images subject={item} style={{ marginTop: 100 }} />
-        }
-      </div>
       <Related parent={item} />
       <Close onClick={detailClose} />
       <div className="loading center fixed z0">
