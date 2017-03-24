@@ -67,54 +67,6 @@ const state = {
       },
       printWhenColor: { id: 'colorNumber', color: 'color', img: 'img' },
     },
-    menu: [
-      {
-        id: 'about',
-        href: '/about',
-        label: 'About Us',
-        icon: 'info-circle-btm',
-      },
-      {
-        id: 'contact',
-        href: '/contact',
-        label: 'Contact Us',
-        icon: 'envelope-o',
-      },
-      {
-        id: 'pricelist',
-        href: '/collection',
-        icon: 'object-ungroup',
-        label: 'The Collection',
-      },
-      {
-        id: 'tradeLogin',
-        href: '/login',
-        icon: 'trade-login',
-        label: 'Trade Login',
-        validators: [ 'isAnonymous' ],
-      },
-      {
-        id: 'logout',
-        action: 'logout',
-        icon: 'sign-out',
-        label: 'Logout',
-        validators: [ 'isAuthenticated' ],
-      },
-      {
-        id: 'project',
-        href: '/project/',
-        icon: 'heart-o',
-        label: 'Favorites',
-        validators: [ 'isAnonymous', 'hasFavorites' ],
-      },
-      {
-        id: 'projects',
-        href: '/project',
-        icon: 'heart-o',
-        label: 'Projects',
-        validators: [ 'isAuthenticated', 'hasFavorites' ],
-      },
-    ],
     schema: {
       id: {
         label: 'Item#',
