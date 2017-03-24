@@ -1,0 +1,188 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  /* type stuff */
+  -moz-font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -ms-font-feature-settings: "kern";
+  -o-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  /*Non standard for webkit */
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system, -apple-system, BlinkMacSystemFont, Roboto, "Droid Sans", "Segoe UI", Segoe, "Liberation Sans", "Nimbus Sans L", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+h1 { font-size: 2rem; }
+h2,h3,h4,h5,h6,p,ul,li,blockquote { font-size: 1rem; }
+
+p {margin:0;}
+p + p { margin-top: 1rem; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/********* color modules **********/
+.bg-pink               { background-color: rgba(236,064,121,1); }
+.bg-brown              { background-color: rgba(047,041,038,1); }
+.bg-gray               { background-color: rgba(132,132,120,1); }
+.bg-darkgray           { background-color: rgba(096,103,103,1); }
+.bg-lightgray          { background-color: rgba(194,211,186,1); }
+.bg-red                { background-color: rgba(183,080,081,1); }
+.bg-orange             { background-color: rgba(195,115,099,1); }
+.bg-yellow             { background-color: rgba(197,192,101,1); }
+.bg-green              { background-color: rgba(140,165,115,1); }
+.bg-blue               { background-color: rgba(157,178,176,1); }
+.bg-purple             { background-color: rgba(174,139,164,1); }
+.bg-black              { background-color: rgba(000,000,000,1); }
+.bg-white              { background-color: rgba(255,255,255,1); }
+
+.bg-pink-hover:hover        { background-color: rgba(236,064,121,1); }
+.bg-brown-hover:hover       { background-color: rgba(047,041,038,1); }
+.bg-gray-hover:hover        { background-color: rgba(132,132,120,1); }
+.bg-darkgray-hover:hover    { background-color: rgba(096,103,103,1); }
+.bg-lightgray-hover:hover   { background-color: rgba(194,211,186,1); }
+.bg-red-hover:hover         { background-color: rgba(183,080,081,1); }
+.bg-orange-hover:hover      { background-color: rgba(195,115,099,1); }
+.bg-yellow-hover:hover      { background-color: rgba(197,192,101,1); }
+.bg-green-hover:hover       { background-color: rgba(140,165,115,1); }
+.bg-blue-hover:hover        { background-color: rgba(157,178,176,1); }
+.bg-purple-hover:hover      { background-color: rgba(174,139,164,1); }
+.bg-black-hover:hover       { background-color: rgba(000,000,000,1); }
+.bg-white-hover:hover       { background-color: rgba(255,255,255,1); }
+
+.pink                  { color: rgba(236,064,121,1); }
+.brown                 { color: rgba(047,041,038,1); }
+.gray                  { color: rgba(132,132,120,1); }
+.darkgray              { color: rgba(096,103,103,1); }
+.lightgray             { color: rgba(194,211,186,1); }
+.red                   { color: rgba(183,080,081,1); }
+.orange                { color: rgba(195,115,099,1); }
+.yellow                { color: rgba(197,192,101,1); }
+.green                 { color: rgba(140,165,115,1); }
+.blue                  { color: rgba(157,178,176,1); }
+.purple                { color: rgba(174,139,164,1); }
+.black                 { color: rgba(000,000,000,1); }
+.white                 { color: rgba(255,255,255,1); }
+
+.pink-hover:hover                  { color: rgba(236,064,121,1); }
+.brown-hover:hover                 { color: rgba(047,041,038,1); }
+.gray-hover:hover                  { color: rgba(132,132,120,1); }
+.darkgray-hover:hover              { color: rgba(096,103,103,1); }
+.lightgray-hover:hover             { color: rgba(194,211,186,1); }
+.red-hover:hover                   { color: rgba(183,080,081,1); }
+.orange-hover:hover                { color: rgba(195,115,099,1); }
+.yellow-hover:hover                { color: rgba(197,192,101,1); }
+.green-hover:hover                 { color: rgba(140,165,115,1); }
+.blue-hover:hover                  { color: rgba(157,178,176,1); }
+.purple-hover:hover                { color: rgba(174,139,164,1); }
+.black-hover:hover                 { color: rgba(000,000,000,1); }
+.white-hover:hover                 { color: rgba(255,255,255,1); }
+
+.border-pink           { border-color: rgba(236,064,121,1); }
+.border-brown          { border-color: rgba(047,041,038,1); }
+.border-gray           { border-color: rgba(132,132,120,1); }
+.border-darkgray       { border-color: rgba(096,103,103,1); }
+.border-lightgray      { border-color: rgba(194,211,186,1); }
+.border-red            { border-color: rgba(183,080,081,1); }
+.border-orange         { border-color: rgba(195,115,099,1); }
+.border-yellow         { border-color: rgba(197,192,101,1); }
+.border-green          { border-color: rgba(140,165,115,1); }
+.border-blue           { border-color: rgba(157,178,176,1); }
+.border-purple         { border-color: rgba(174,139,164,1); }
+.border-black          { border-color: rgba(000,000,000,1); }
+.border-white          { border-color: rgba(255,255,255,1); }
+
+/*** okay, some specific to this layout stuff ***/
+
+html,
+body,
+body > div,
+body > div > div  {
+  height: 100%;
+}
+
+page {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  min-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main nav { width: 20%; }
+main > div { width: 80%; }
+
+nav .menu {
+  margin-top: calc(5em - 2px);
+  border-top: 1px solid;
+}
+
+nav li a,
+.drawers li a {
+  padding: .75em 2em;
+}
+
+.drawers li a {
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid;
+  margin-left: -2em;
+  margin-right: -2em;
+}
+
+.drawers li:first-child a {
+  border-top: 1px solid;
+}
+
+.drawers li:last-child button {
+  display: block;
+  padding: .75em 2em .75em 3.25em;
+  border:none;
+  border-bottom: 1px solid;
+  margin-left: -2em;
+  margin-right: -2em;
+  width: calc(100% + 4em);
+  font-size: 1em;
+  text-align: left;
+  background: transparent;
+}
+
+.drawers li:last-child i.fa-plus {
+  position: absolute;
+  top: .8em;
+}
