@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import css from '../style'
+// import css from '../style'
 
 import { Menu } from './connected'
 import Logo from './Logo'

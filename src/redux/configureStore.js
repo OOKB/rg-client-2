@@ -8,7 +8,6 @@ import {
   historyMiddleware,
   syncHistoryWithStore,
 } from 'redux-history-sync'
-
 import { reduxFireListener, reduxFireMiddleware } from '../firebase'
 import defaultState from './defaultState'
 
