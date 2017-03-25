@@ -23,13 +23,11 @@ export function getImgUrl(category, id) {
 }
 export function itemFill(item, catCodeIndex) {
   if (!item || !item.id) return item
-  const { id, category, colors, contents, name, patternNumber, price } = item
+  const { id, category, color, contents, name, patternNumber, price } = item
   const colorNumber = id.replace(`${patternNumber}-`, '')
-  const color = colors && colors.join('/')
   return {
     ...item,
     categoryCode: catCodeIndex[category],
-    color,
     colorNumber,
     link: `/detail/${id}`,
     img: getImgUrl(category, id),
