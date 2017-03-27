@@ -1235,7 +1235,7 @@ cape-redux-auth@^4.0.0:
     redux-graph "^2.7.0"
     redux-history-sync "^3.1.0"
 
-cape-redux-collection@^4.0.1, cape-redux-collection@^4.1.0:
+cape-redux-collection@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.1.0.tgz#ad794e73b72d7bb78d12a53d38fbac9e6ae2e481"
   dependencies:
@@ -1247,6 +1247,19 @@ cape-redux-collection@^4.0.1, cape-redux-collection@^4.1.0:
     redux-graph "^2.10.0"
     redux-history-sync "^3.1.0"
     reselect "^2.5.4"
+
+cape-redux-collection@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.2.0.tgz#e5da7092df15f5efe753de376627ce4b91c78b3d"
+  dependencies:
+    cape-lodash "^1.7.0"
+    cape-redux "^3.1.0"
+    cape-redux-auth "^4.0.0"
+    cape-select "^2.3.1"
+    lodash "^4.17.2"
+    redux-graph "^2.10.0"
+    redux-history-sync "^3.1.0"
+    reselect "^3.0.0"
 
 cape-redux-reducer@^3.6.0:
   version "3.6.0"
@@ -5030,6 +5043,10 @@ requires-port@1.0.x, requires-port@1.x.x:
 reselect@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/reselect/-/reselect-2.5.4.tgz#b7d23fdf00b83fa7ad0279546f8dbbbd765c7047"
+
+reselect@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-3.0.0.tgz#b2e35977f03048700028eaee3a8c0639e40e8f35"
 
 resolve-from@^1.0.0:
   version "1.0.1"

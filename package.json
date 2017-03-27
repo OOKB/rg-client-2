@@ -20,7 +20,7 @@
     "cape-lodash": "^1.11.0",
     "cape-redux": "^3.1.0",
     "cape-redux-auth": "^4.0.0",
-    "cape-redux-collection": "^4.1.0",
+    "cape-redux-collection": "^4.2.0",
     "cape-redux-reducer": "^3.6.0",
     "cape-select": "^2.4.0",
     "cape-validate": "^1.0.2",
