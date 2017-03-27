@@ -5,6 +5,7 @@ export const firebaseConfig = {
   databaseURL: 'https://rogersandgoffigon-b0977.firebaseio.com',
   storageBucket: 'rogersandgoffigon-b0977.appspot.com',
   messagingSenderId: '269310750724',
+  doSignInAnon: true,
 }
 export const OT_ITEM = 'OrderTrackItem'
 export const entities = [OT_ITEM, 'db', 'ImageObject']
