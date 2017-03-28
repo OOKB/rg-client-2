@@ -8,8 +8,7 @@ import Footer from './Footer'
 import ItemGrid from './ItemGrid'
 import Placeholder from './Placeholder'
 
-function Sample({ imgSize, items, patternIndex }) {
-  console.log(items, patternIndex)
+function Sample({ imgSize, items }) {
   return (
     <div id="home">
       <Header />
@@ -27,10 +26,11 @@ function Sample({ imgSize, items, patternIndex }) {
 
 Sample.propTypes = {
   imgSize: PropTypes.string.isRequired,
-  items: PropTypes.array,
+  items: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)),
 }
 Sample.defaultProps = {
   imgSize: '?w=240&h=168&crop=focalpoint&fit=crop&fp-x=.5&fp-y=.5&fp-z=2',
+  items: null,
 }
 
 export default connect(selector)(Sample)
