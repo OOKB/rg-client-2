@@ -1205,9 +1205,9 @@ caniuse-db@^1.0.30000346, caniuse-db@^1.0.30000618, caniuse-db@^1.0.30000639:
   version "1.0.30000640"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000640.tgz#7b7fd3cf13c0d9d41f8754b577b202113e2be7ca"
 
-cape-firebase@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/cape-firebase/-/cape-firebase-0.3.0.tgz#d30cee5cccfc94a2babaccd3b36d1f621a35a4b9"
+cape-firebase@^0.3.0, cape-firebase@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/cape-firebase/-/cape-firebase-0.3.1.tgz#57799db3111b15851017606f349d8ee1c604716e"
   dependencies:
     cape-lodash "^1.11.0"
     cape-redux "^3.1.0"
@@ -1236,22 +1236,24 @@ cape-redux-auth@^4.0.0:
     redux-history-sync "^3.1.0"
 
 cape-redux-collection@^4.0.1:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.1.0.tgz#ad794e73b72d7bb78d12a53d38fbac9e6ae2e481"
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.2.1.tgz#d7d88d88217cd73b2a6c71d7566d6a57b5a70c63"
   dependencies:
+    cape-firebase "^0.3.0"
     cape-lodash "^1.7.0"
-    cape-redux "^2.2.1"
+    cape-redux "^3.1.0"
     cape-redux-auth "^4.0.0"
     cape-select "^2.3.1"
     lodash "^4.17.2"
     redux-graph "^2.10.0"
     redux-history-sync "^3.1.0"
-    reselect "^2.5.4"
+    reselect "^3.0.0"
 
-cape-redux-collection@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.2.0.tgz#e5da7092df15f5efe753de376627ce4b91c78b3d"
+cape-redux-collection@^4.2.3:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/cape-redux-collection/-/cape-redux-collection-4.2.3.tgz#f0a354ab487044bec2b650da6eaec98a62f0d2c4"
   dependencies:
+    cape-firebase "^0.3.0"
     cape-lodash "^1.7.0"
     cape-redux "^3.1.0"
     cape-redux-auth "^4.0.0"

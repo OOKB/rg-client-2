@@ -1,6 +1,6 @@
 import {
   compact, cond, constant, curry, every, flatten, flow, filter, includes, isEmpty,
-  map, method, mapValues, startsWith, stubTrue, uniq,
+  map, method, mapValues, stubTrue, uniq,
 } from 'lodash'
 import { concat, orderBy, pickBy, pluck } from 'lodash/fp'
 import { createSelector } from 'reselect'

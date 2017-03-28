@@ -1,18 +1,6 @@
-import { keyBy, set } from 'lodash'
-import { insertFields } from 'redux-graph'
-
-import showrooms from './showrooms'
-
-const entity = keyBy(showrooms, 'id')
-
 export const defaultUser = { id: 'user0', type: 'Person', name: 'Anonymous' }
 export const dataFeed = { id: 'pBlf', type: 'DataFeed', title: 'DL Order Track Data' }
 export const webAppEntity = { id: 'delanyLongWebApp', type: 'WebApplication' }
-
-// Just use actions??
-set(entity, 'Person.user0', insertFields(defaultUser))
-set(entity, 'DataFeed.pBlf', insertFields(dataFeed))
-set(entity, 'WebApplication.delanyLongWebApp', insertFields(webAppEntity))
 
 const state = {
   db: {
@@ -105,7 +93,7 @@ const state = {
       },
       price: {
         label: 'Net Price',
-        validators: [ 'isAuthenticated' ],
+        validators: ['isAuthenticated'],
       },
       repeat: {
         label: 'Approx. Repeat',
@@ -130,9 +118,6 @@ const state = {
       noActQ: 'Are you a trades person and without an existing account?',
       small: 'Accounts are available to trades people only (designers, re-sellers and industry members) and are not meant for regular customers.',
     },
-  },
-  graph2: {
-    entity,
   },
 }
 
