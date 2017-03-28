@@ -1,32 +1,36 @@
 import React, { PropTypes } from 'react'
+import { map } from 'lodash'
 import { connect } from 'react-redux'
 
-import { homeSelector } from '../select/home'
+import selector from '../select/samples'
 import Header from './Header'
 import Footer from './Footer'
 import ItemGrid from './ItemGrid'
 import Placeholder from './Placeholder'
 
-function Home({ imgSize, items, missingImage }) {
+function Sample({ imgSize, items, patternIndex }) {
+  console.log(items, patternIndex)
   return (
     <div id="home">
       <Header />
       {/* {showDrawer && <Drawer />} */}
       {(!items || !items.length) && <Placeholder /> }
-      <ItemGrid items={items} missingImage={missingImage} imgSize={imgSize} />
+      {items &&
+        map(items, (patternColors, key) =>
+          <ItemGrid key={key} items={patternColors} imgSize={imgSize} />
+        )
+      }
       <Footer />
     </div>
   )
 }
 
-Home.propTypes = {
+Sample.propTypes = {
   imgSize: PropTypes.string.isRequired,
-  items: PropTypes.array.isRequired,
-  missingImage: PropTypes.func.isRequired,
-  showDrawer: PropTypes.bool.isRequired,
+  items: PropTypes.array,
 }
-Home.defaultProps = {
+Sample.defaultProps = {
   imgSize: '?w=240&h=168&crop=focalpoint&fit=crop&fp-x=.5&fp-y=.5&fp-z=2',
 }
 
-export default connect(homeSelector)(Home)
+export default connect(selector)(Sample)

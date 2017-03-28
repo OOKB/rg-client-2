@@ -3,7 +3,8 @@ import about from './About'
 import contact from './Contact'
 // export favs from './containers/Favs'
 import loading from '../redux/Loading'
-import home from '../containers/Home'
+import home from './Home'
+import sample from './Sample'
 import detail from '../containers/Detail'
 // export itemEdit from './containers/ItemEdit'
 import pricelist from './Pricelist/Pricelist'
@@ -13,5 +14,5 @@ import login from '../containers/Login'
 import showroom from '../containers/Showroom'
 
 export {
-  about, contact, loading, home, detail, pricelist, project, projects, login, showroom,
+  about, contact, loading, home, detail, pricelist, project, projects, login, sample, showroom,
 }
