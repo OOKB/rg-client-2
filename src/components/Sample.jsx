@@ -10,7 +10,7 @@ import Placeholder from './Placeholder'
 
 function Sample({ imgSize, items }) {
   return (
-    <div id="home">
+    <div id="sample">
       <Header />
       {/* {showDrawer && <Drawer />} */}
       {(!items || !items.length) && <Placeholder /> }

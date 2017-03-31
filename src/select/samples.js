@@ -1,5 +1,6 @@
-import { createSelector, createStructuredSelector } from 'reselect'
+import { createSelector } from 'reselect'
 import { flow, keys, map, propertyOf } from 'lodash'
+import { structuredSelector } from 'cape-select'
 
 import { getDb } from './'
 import { patternIndex } from './home'
@@ -36,7 +37,7 @@ export const orderFields = {
   company,
 }
 
-const sampleSelector = createStructuredSelector({
+const sampleSelector = structuredSelector({
   items,
   patternIndex,
   samplePatterns,
