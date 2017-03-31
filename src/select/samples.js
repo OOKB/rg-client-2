@@ -32,7 +32,7 @@ export const company = {
   type: 'text',
   validators: ['isRequired'],
 }
-export const orderFields = {
+export const fields = {
   name,
   company,
 }
@@ -41,7 +41,7 @@ const sampleSelector = structuredSelector({
   items,
   patternIndex,
   samplePatterns,
-  orderFields,
+  fields,
   entityType: ORDER,
 })
 export default sampleSelector

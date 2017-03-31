@@ -1,4 +1,4 @@
-import { flow, partial } from 'lodash'
+import { identity, flow, partial } from 'lodash'
 import { add, get, map, orderBy, pick, size, split } from 'lodash/fp'
 import { callWith, replaceField, setField, setKeyVal } from 'cape-lodash'
 import { createSelector } from 'reselect'
@@ -11,10 +11,10 @@ import { saveEntity } from 'cape-firebase'
 import { CDN_URL } from '../config'
 import { omitFile } from '../components/FileUpload/dropZoneUtils'
 import { loadImage, loadImageUrl, loadSha } from '../components/FileUpload/processFile'
-import { getIdFromFile, selectItems } from './items'
+// import { getIdFromFile, selectItems } from './items'
 import firebase from '../firebase'
 
-const { storage, update } = firebase
+const { update } = firebase
 
 export const ACCEPT_FILE_TYPE = 'image/jpeg'
 export const collectionId = 'file'
@@ -35,8 +35,7 @@ export const onComplete = (dispatch, { id, fileName, type }) => () => {
   // console.log('done', getFileUrl(fileName))
 }
 
-export const uploadImage = (dispatch, entity, { file, ...fileInfo }) => {
-
+export const uploadImage = (dispatch, entity, { file }) => {
   loadImageUrl(file, console.error, (imageInfo) => {
     if (!imageInfo) return saveEntity(entity)
     const { dataUrl, ...sizes } = imageInfo
@@ -46,11 +45,11 @@ export const uploadImage = (dispatch, entity, { file, ...fileInfo }) => {
   })
 
   // @TODO Make sure there isn't already this file in the database.
-  const uploadTask = storage.child(fileName).put(file)
-  uploadTask.on('state_changed',
-    onProgress(dispatch), console.error, onComplete(dispatch, entity)
-  )
-  return uploadTask
+  // const uploadTask = storage.child(fileName).put(file)
+  // uploadTask.on('state_changed',
+  //   onProgress(dispatch), console.error, onComplete(dispatch, entity)
+  // )
+  // return uploadTask
 }
 
 
@@ -121,25 +120,17 @@ export const handleSelect = errorOrBlur(({ dispatch }, file) => {
   loadSha(file).then((file2) => {
     const entity = dispatch(ensureFileEntity(file2))
     if (!entity.hasEntity) {
-      uploadImage(dispatch, agent)
+      // uploadImage(dispatch)
     }
   })
 })
 
 // A file has been selected. Upload a file. First func is props. Use that instead of thunk.
-export const handleUpload = props => (file) => {
-  // const hasError = errorCheck(props, file)
-  // blurSelectorOmitFile(props, file)
-  // clearFileSelect(dispatch)
-  // loadSha(file, ensureFileEntity(dispatch, getState))
-  // if (file) loadSha(file, uploadImage(dispatch, agent))
-  // console.log(file)
-  return undefined
-}
-export const findItemFromFile = getSelect(
-  selectItems,
-  flow(fieldValue(collectionId), getIdFromFile),
-)
+export const handleUpload = identity
+// export const findItemFromFile = getSelect(
+//   selectItems,
+//   flow(fieldValue(collectionId), getIdFromFile),
+// )
 
 export const getImg = flow(
   pick(['dateCreated', 'name', 'url']),
@@ -157,5 +148,5 @@ export const imageSelector = structuredSelector({
   accept: ACCEPT_FILE_TYPE,
   collectionId,
   images: getImages,
-  item: findItemFromFile,
+  // item: findItemFromFile,
 })
